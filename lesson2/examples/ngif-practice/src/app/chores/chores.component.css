@@ -11,12 +11,27 @@ h3 {
 }
 
 img {
-    max-width: 15%;
+    max-width: 30%;
     height: auto;
     display: block;
     margin: auto;
 }
 
 .motivation{
+    color: orange;
+    text-align: center;
+}
+
+#treatHeader {
+    text-align: center;
     color: green;
+    font-size: 200%
+
+}
+
+#treatContent {
+    text-align: center;
+    color: green;
+
+
 }

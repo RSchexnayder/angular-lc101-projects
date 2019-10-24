@@ -10,8 +10,24 @@
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
+    <div class="trophy" *ngIf="chores.length === 0 || finishedChores.length > 3; else noCookie">
+        <img src="https://png.pngtree.com/png-vector/20190114/ourlarge/pngtree-trophy-warm-color-graduation-season-summer-vacation-png-image_330449.jpg" alt = "Trophy">
+    </div>
+    <ng-template #noCookie>
+        <p>No allowance yet.</p>
+    </ng-template>
 </div>
 <hr>
 <div class="motivation" *ngIf="chores.length > finishedChores.length">
     <p>Work Harder!</p>
+</div>
+<hr> 
+<div>
+    <div *ngIf = "finishedChores.length > 4 && chores.lenght === 0; else treatInstructions">
+        <p>Ice cream treat! </p>
+    </div>
+    <ng-template #treatInstructions>
+        <p id="treatHeader">To earn an ice cream treat: </p>
+        <p id="treatContent">The chores list much be empty <br> <br> The Done list must have at least 4 items.</p>
+    </ng-template>
 </div>
